@@ -57,12 +57,12 @@ function changeSlide() {
 }
 changeSlide();
 
-function elo() {
-  for (let i = 0; i < image.length; i++) {
-    if (image[i].classList.contains("fade")) {
-      image[i].classList.remove("fade");
-    }
-  }
-}
+// function elo() {
+//   for (let i = 0; i < image.length; i++) {
+//     if (image[i].classList.contains("fade")) {
+//       image[i].classList.remove("fade");
+//     }
+//   }
+// }
 
-timer2 = setTimeout(elo, 2800);
+// timer2 = setTimeout(elo, 2800);
