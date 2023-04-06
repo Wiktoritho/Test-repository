@@ -20,20 +20,31 @@
   width: 300px;
   height: 600px;
 }
+.blok{
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
 .background__image {
   position: absolute;
+  width: auto;
+  height: 100%;
   z-index: 2;
+  opacity: 0.1;
 }
 .fade{
   animation-name: image__fade;
-  animation-duration: 3000ms;
+  animation-duration: 1000ms;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
-  animation-delay: 1200ms;
-  animation-iteration-count: 1;
+  animation-delay: 1100ms;
   transform: translateY(100%);
 }
-
 .logo__container {
   animation-name: logo__container;
   animation-duration: 800ms;
@@ -52,7 +63,7 @@
 }
 .country {
   animation-name: country;
-  animation-duration: 3400ms;
+  animation-duration: 3000ms;
   animation-fill-mode: forwards;
   animation-delay: 1800ms;
   animation-timing-function: linear;
@@ -73,7 +84,7 @@
 }
 .country p {
   animation-name: description;
-  animation-duration: 3200ms;
+  animation-duration: 2800ms;
   animation-delay: 2000ms;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
@@ -85,7 +96,7 @@
 }
 .city {
   animation-name: city;
-  animation-duration: 3200ms;
+  animation-duration: 2800ms;
   animation-delay: 2000ms;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
@@ -106,7 +117,7 @@
 }
 .city p {
   animation-name: description;
-  animation-duration: 3000ms;
+  animation-duration: 2600ms;
   animation-delay: 2200ms;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
@@ -125,7 +136,7 @@
 }
 .from p {
   animation-name: description;
-  animation-duration: 3200ms;
+  animation-duration: 2800ms;
   animation-delay: 2000ms;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
@@ -145,7 +156,7 @@
 }
 .price p {
   animation-name: description;
-  animation-duration: 3200ms;
+  animation-duration: 2800ms;
   animation-delay: 2000ms;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
@@ -158,7 +169,7 @@
 }
 .order {
   animation-name: order;
-  animation-duration: 3200ms;
+  animation-duration: 2800ms;
   animation-delay: 2000ms;
   animation-fill-mode: forwards;
   transform: translateX(200%);
@@ -233,11 +244,29 @@
   cursor: pointer;
 }
 
-.cokolwiek{
-  animation-name: cokolwiek;
-  animation-duration: 1000ms;
+.scalefade{
+  animation-name: scalefade;
+  animation-duration:5000ms;
+  animation-timing-function: linear;
   animation-fill-mode: forwards;
-  animation-delay: 0ms;
+}
+
+
+@keyframes scalefade{
+  0%{
+    opacity: 0.1;
+    scale: 1.0;
+  }
+  25%{
+    opacity: 1.0;
+  }
+  75%{
+    opacity: 1.0;
+  }
+  100%{
+    opacity: 1.0;
+    scale: 1.2;
+  }
 }
 
 @keyframes background-fade {
@@ -278,17 +307,16 @@
     padding: 0 8px 0 8px;
     width: auto;
   }
-  80% {
+  60% {
     transform: translateX(0%);
     padding: 0 8px 0 8px;
     width: auto;
   }
-  90% {
+  70% {
     padding: 0;
     width: 0;
   }
-  100% {
-    transform: translateX(-100%);
+  90% {
     padding: 0;
     width: 0;
   }
@@ -298,11 +326,14 @@
   20% {
     transform: translateY(0%);
   }
-  75% {
+  50% {
     transform: translateY(0%);
   }
+  70%{
+    transform: translateY(-300%);
+  }
   100% {
-    transform: translateY(-200%);
+    transform: translateY(-300%);
   }
 }
 
@@ -312,17 +343,16 @@
     width: auto;
     padding: 0 10px 0 10px;
   }
-  85% {
+  65% {
     transform: translateX(0%);
     width: auto;
     padding: 0 10px 0 10px;
   }
-  90% {
+  75% {
     width: 0;
     padding: 0;
   }
-  100% {
-    transform: translateX(-100%);
+  90% {
     width: 0;
     padding: 0;
   }
